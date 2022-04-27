@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<title>Welcome</title>
+		<link rel="stylesheet" href="sub.css"/>
+		<script src="sub.js"></script>
+		<script src="verification.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<div class="status-wrap usn">
+				<div class="status-wrap absolute">
+					<div class="status-situation status-not-safe" id="status-situation"></div>
+					<div class="status-text status-verification-code" id="status-verification-code"></div>
+					<div class="status-text status-in-out" id="status-in-out"></div>
+				</div>
+			</div>
+			<div id="keypad">
+				<div class="keypad-wrap usn">
+					<div class="keypad-wrap absolute">
+						<div class="k-box k-a1 k-b1 k-bt k-bl k-br" onclick="verification_1(), verification()"><div class="k-btext">1</div></div>
+						<div class="k-box k-a2 k-b1 k-bt k-bl k-br" onclick="verification_5(), verification()"><div class="k-btext">5</div></div>
+						<div class="k-box k-a3 k-b1 k-bt k-bl k-br k-bb" onclick="verification_9(), verification()"><div class="k-btext">9</div></div>
+						<div class="k-box k-a1 k-b2 k-bt k-bl k-br" onclick="verification_2(), verification()"><div class="k-btext">2</div></div>
+						<div class="k-box k-a2 k-b2 k-bt k-bl k-br" onclick="verification_6(), verification()"><div class="k-btext">6</div></div>
+						<div class="k-box k-a3 k-b2 k-bt k-bl k-br k-bb" onclick="verification_0(), verification()"><div class="k-btext">0</div></div>
+						<div class="k-box k-a1 k-b3 k-bt k-bl k-br" onclick="verification_3(), verification()"><div class="k-btext">3</div></div>
+						<div class="k-box k-a2 k-b3 k-bt k-bl k-br" onclick="verification_7(), verification()"><div class="k-btext">7</div></div>
+						<div class="k-box-delete k-a3 k-b3 k-bt k-bl k-br k-bb" onclick="verification_delete()"><div class="k-btext">delete</div></div>
+						<div class="k-box k-a1 k-b4 k-bt k-bl k-br" onclick="verification_4(), verification()"><div class="k-btext">4</div></div>
+						<div class="k-box k-a2 k-b4 k-bt k-bl k-br" onclick="verification_8(), verification()"><div class="k-btext">8</div></div>
+					</div>
+				</div>
+			</div>
+			<div id="verification">
+				<div class="box-input usn">
+					<div class="box-input absolute">
+						<div class="box-input-inner" id="verification-code"></div>
+					</div>
+				</div>
+			</div>
+			<div class="hide" id="button">
+				<div class="button-wrap usn">
+					<div class="button-wrap absolute">
+						<div class="button b-1 b-b1" onclick="go()"><div class="button-inner">OK</div></div>
+						<div class="button b-2 b-b1" onclick="closein()"><div class="button-inner">CLOSE</div></div>
+						<div class="button b-1 b-b2" onclick="changemode()"><div class="button-inner">MODE</div></div>
+					</div>
+				</div>
+			</div>
+			<div class="hide" id="input">
+				<input class="input-text" id="source" maxlength="1000">
+			</div>
+			<div class="hide" id="result">
+				<div class="result-wrap" id="result-wrap">
+					<div id="result-clear"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
